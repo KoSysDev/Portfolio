@@ -1,0 +1,3360 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/*code de la video de loading*/
+.laVideoContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1200;
+    width: 100%;
+    height: 900px;
+    visibility: visible;
+}
+
+.mp4{
+    margin-top: 6%;
+    margin-left: 35%;
+    height: 480px;
+}
+/*code css pour désactiver la video de loading en javascript*/
+.désactiveVideo{
+    visibility: hidden;
+}
+
+header {
+    background-color: transparent;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 1%;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 60px;
+    color: black;
+}
+/* code pour rendre invisible le menu déroulant*/
+.btn-group{
+    display: none;
+}
+#KoSys_logo{
+    height: 60px;
+    width: 10%;
+    margin-top: 1%;
+}
+
+header h1{
+    margin: 0;
+    font-size: 150%;
+    color: white;
+}
+/* propriete css à utiliser avec JavaScript pour changer le background du header au scroll de la page*/
+.active{
+    background-color: var(--bs-primary);
+    animation: background-color 0.3s;
+    color: #fff;
+}
+.activeH1{
+    color: #ffffff;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: -5%;
+}
+
+nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+nav a:hover{
+    color: yellow;
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+#Accueil{
+    background-image: url(./img/img1.jpg);
+    background-attachment: fixed;
+    height: 720px;
+    color:#fff;
+    width: 100%;
+}
+#Accueil h1{
+    font-size: 435%;
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-top: 5%;
+}
+#Accueil h2{
+    justify-content: space-between;
+    margin-left: 59%;
+    margin-top: 5%; 
+    font-size: 145%;
+}
+#Accueil h3{
+    font-size: 130%;
+    margin-left: 25%;
+    margin-top: 12%; 
+}
+
+/*A propos*/
+#Apropos{
+    background-color: whitesmoke;
+    background-attachment: fixed;
+    height: 850px;
+    color:black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#container{
+    text-align: center;
+    background-color: rgba(245, 245, 220, 0.444);
+    height: 70%;
+    width: 80%;
+    margin-left: 10%;;
+    margin-top: 0%;
+    box-shadow: 20px 20px 20px rgba(12, 1, 1, 0.696);
+    display: inline;
+}
+#container h1{
+    margin-top: 2%;
+}
+/*Partie profil*/
+#photo{
+    width: 17%;
+    margin-left: 6%;
+    text-align: left;
+}
+#photo h2{
+    margin-top: 5%;
+    font-size: 80%;
+}
+#photo h5{
+    margin-left: 40%;;
+}
+.img-thumbnail{
+    height: 230px;
+    width: 100%;
+    margin-top: 15%;
+}
+
+/*premiere ligne de séparation*/
+.separation {
+    border-left: 1px solid #000; /* Couleur et épaisseur de la bordure */
+    height: 400px; /* Hauteur de la séparation */
+    margin-top: -32%;
+    margin-left: 30%;
+}
+
+/*parie des compétences*/
+.compétences{
+    margin-top: -37%;
+    font-size: small;
+    height: 50px;
+}
+.compétences label{
+    margin-left: -24%;
+}
+.progress{
+    width: 33%;
+    margin-left: 33%;
+}
+#progressbar1{
+    width: 90%;
+}
+#progressbar2{
+    width: 80%;
+}
+#progressbar3{
+    width: 85%;
+}
+#progressbar4{
+    width: 70%;
+}
+#progressbar5{
+    width: 75%;
+}
+/*animation des progress bar au hover sur la section à propos*/
+
+/*Progress bar 1*/
+@keyframes changeWidth1 {
+    0% {
+      width: 18.3%; /* Largeur initiale */
+    }
+    50% {
+      width: 75%px; /* Première étape de changement de largeur */
+    }
+    100% {
+      width: 90%; /* Deuxième étape de changement de largeur */
+    }
+  }
+#Apropos:hover #progressbar1{
+    animation: changeWidth1 5s alternate;    
+}
+
+/*Progress bar 2*/
+@keyframes changeWidth2 {
+    0% {
+      width: 6.3%; /* Largeur initiale */
+    }
+    50% {
+      width: 47%px; /* Première étape de changement de largeur */
+    }
+    100% {
+      width: 80%; /* Deuxième étape de changement de largeur */
+    }
+  }
+
+#Apropos:hover #progressbar2{
+    animation: changeWidth2 8s alternate;   
+}
+
+/*Progress bar 3*/
+@keyframes changeWidth3 {
+    0% {
+      width: 6.3%; /* Largeur initiale */
+    }
+    50% {
+      width: 50%px; /* Première étape de changement de largeur */
+    }
+    100% {
+      width: 85%; /* Deuxième étape de changement de largeur */
+    }
+  }
+
+#Apropos:hover #progressbar3{
+    animation: changeWidth3 10s alternate;   
+}
+
+/*Progress bar 4*/
+@keyframes changeWidth4 {
+    0% {
+      width: 0%; /* Largeur initiale */
+    }
+    50% {
+      width: 35%px; /* Première étape de changement de largeur */
+    }
+    100% {
+      width: 70%; /* Deuxième étape de changement de largeur */
+    }
+  }
+
+#Apropos:hover #progressbar4{
+    animation: changeWidth4 10s alternate;   
+}
+
+/*Progress bar 5*/
+@keyframes changeWidth5 {
+    0% {
+      width: 3%; /* Largeur initiale */
+    }
+    50% {
+      width: 50%px; /* Première étape de changement de largeur */
+    }
+    100% {
+      width: 75%; /* Deuxième étape de changement de largeur */
+    }
+  }
+
+#Apropos:hover #progressbar5{
+    animation: changeWidth5 10s alternate;   
+}
+
+/* code pour mettre en forme le progress bar mixte*/
+
+.progress-stacked{
+    width: 33%;
+    margin-left: 33%;
+}
+.progressMeet1{
+    width: 25%;
+}
+.progressMeet2{
+    width: 40%;
+}
+.progressMeet3{
+    width: 20%;
+}
+.progressMeet4{
+    width: 15%;
+}
+#MeetZone1{
+    width: 100%;
+}
+#MeetZone2{
+    width: 100%;
+    background-color: peachpuff;
+}
+#MeetZone3{
+    width: 100%;
+}
+#MeetZone4{
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+
+/*deuxième ligne de séparation*/
+.separation2 {
+    border-left: 1px solid #000; /* Couleur et épaisseur de la bordure */
+    height: 400px; /* Hauteur de la séparation */
+    margin-top: 0%;
+    margin-left: 69%;
+}
+
+/*partie Ma Vision*/
+.Vision{
+    margin-left: 65%;
+    margin-top: -36%;
+}
+.VisionPhoto{
+    height: 200px;
+    width: 45%;
+    float: right;
+    margin: 5px 5px 0px 5px;
+    margin-top: 12%;
+
+}
+.Vision p{
+    font-size: 80%;
+    width: 83%;
+    margin-left: 15%;
+    margin-top: 12%;
+}
+/* Code CSS de la parie Services Commence à partir d'ici*/
+#Services{
+    height: 800px;
+    width: 100%;
+    background-color: #090e26;
+    background-attachment: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-inline: 80px;
+    text-align: center;
+
+}
+#Services h1{
+    color: #fff;
+    margin-left: 43%;
+    margin-top: 5%;
+}
+/*les images des services et leur titre*/
+#Services img{
+    height: 120px;
+    margin-top: 10%;
+}
+#Services h4{
+    font-size: 20px;
+}
+/*les div des services*/
+.Service1, .Service2, .Service3, .Service4,.Service5, .Service6{
+    width: 30%;
+    background-color: #fff;
+    height: 250px;
+    margin-top: 8%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(173, 196, 199, 0.696);
+    justify-content: center;
+    overflow: hidden;
+}
+.Service1{
+    margin-left: -61%;
+    margin-top: 10%;
+}
+.Service2{
+    margin-top: 10%;
+}
+.Service3{
+    margin-top: 10%;
+}
+.Service4{
+    margin-top: 0%;
+}
+.Service5{
+    margin-top: 0%;
+}
+.Service6{
+    margin-top: 0%;
+}
+/* les hover des services*/
+.hoverText{
+    background-color: var(--bs-warning);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 355px;
+    width: 100%;
+    margin-left: -150%;
+    margin-top: -47%;
+    transform: translateX(-50%);
+    opacity:0;
+    transition: all 1s;
+}
+.hoverText button{
+    height: 30px;
+    width: 26%;
+    margin-top: 0%;
+    margin-left: 35%;
+    font-size: small;
+}
+
+.Service1:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+    
+}
+.Service2:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service3:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service4:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service5:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service6:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+
+/*Section Tarifs*/
+#Tarifs{
+    height: 800px;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        height: 1000px;
+        margin-left: -10%;
+        margin-top: -12%;
+        width: 110%;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 47%;
+    margin-top: 5%;
+}
+
+.forfait {
+    width: 350px;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 415%;
+    left: 15%;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    height: 60%;
+    width: 27%;
+    top: 410%;
+    left: 8%;
+    z-index: 2;
+}
+
+
+#standard{
+    position: absolute;
+    top: 408%;
+    left: 40%;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+
+#standard:hover{
+    height: 70%;
+    width: 30%;
+    top: 402%;
+    left: 37%;
+    z-index: 2;
+}
+
+
+#professionnel{
+    position: absolute;
+    top: 404%;
+    left: 65%;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+    height: 80%;
+    width: 27%;
+    top: 400%;
+    left: 67%;
+    z-index: 2;
+}
+/* Section contact*/
+#Contact{
+    height: 750px;
+    background-attachment: scroll;
+    background-image: url(./img/call.jpg);
+}
+/* container Block permet de rendre flou l'image de la section contact*/
+#ContainerBlock{
+    background-color: #d5dde889;
+    height: 750px;
+    margin-top: 0%;
+}
+
+#Contact form{
+    z-index: 1;
+    margin-left: -2%;
+    width: 40%;
+}
+#Contact label{
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+#Textarea1{
+    height: 140px;
+}
+#btnEnvoyer{
+    margin-left: 36%;
+    height: 45px;
+    width: 25%;
+    border-top-right-radius: 40%;
+}
+.contactContainer{
+    position: absolute;
+    width: 85%;
+    margin-left: 8%;
+    margin-top: 5%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7cb;
+}
+.contactContainer h1{
+    margin-top: 1%;
+    margin-left: 95%;
+}
+
+/*la div contenant la map*/
+.LaMap iframe{
+    margin-left: 5%;
+    margin-top: 15%;
+}
+
+/*les social média*/
+.SocialMedia{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 20%;
+    top: 75%;
+    left: 48%;
+}
+.linkedin i, .Whatsapp i, .github i, .instagram i{
+    font-size: 40px;
+}
+
+.linkedin a, .Whatsapp a, .github a, .instagram a{
+    color: #000;
+}
+
+.Whatsapp i{
+    margin-left: 40%;
+}
+
+.github i{
+    margin-left: 80%;
+}
+
+.instagram i{
+    margin-left: 110%;
+}
+
+.linkedin a:hover{
+    color: var(--bs-primary);
+}
+
+.Whatsapp a:hover{
+    color: var(--bs-success);
+}
+
+.github a:hover{
+    color: var(--bs-warning);
+}
+
+.instagram a:hover{
+    color: var(--bs-danger);
+}
+
+/*la div du PopUp*/
+.PopUpContainer{
+    visibility: hidden;
+    position: absolute;
+    z-index: 500;
+    justify-content: center;
+    text-align: justify;
+    background-color: #081c3b7d;
+    height: 752px;
+    width: 100%;
+    margin-top: 0%;
+    display: flex;
+    flex-direction: row;
+}
+.PopUp{
+    text-align: center;
+    background-color: #fff;
+    height: 170px;
+    width: 15%;
+    position: absolute;
+    z-index: 600;
+    top: 35%;
+    left: 43%;
+    border-radius: 4%;
+}
+.PopUp p{
+    margin-top: 28%;
+    color: #000;
+}
+
+.croix{
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 100%;
+    border: 0.5px solid black;
+    position: inherit;
+    top: 32%;
+    z-index: 650; /*Pour mettre la croix au dessus popup(un z-index>600 pour que ca fonctionne vu que le z-index du popup est 600*/
+}
+.croix i{
+    font-size: 50px;
+    color: var(--bs-danger);
+}
+
+/* code pour rendre visible le popup avec JS*/
+@keyframes fadeOut {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      display: none; /* Cela cache la div une fois l'animation terminée */
+    }
+  }
+.PopUpActive{
+    animation: fadeOut 2s forwards;
+}
+
+/*le bouton scroll to top*/
+#scrollTop a{
+    color: #000;
+}
+.BtnScrollTop{
+    visibility: hidden;
+    position: fixed;
+    left: 96.5%;
+    top: 84.5%;
+    background-attachment: scroll;
+    background-color: rgba(0, 255, 255, 0.256);
+    width: 3%;
+    border-radius: 10%;
+}
+
+.BtnScrollTop i{
+    font-size: 35px;
+    margin-left: 10%;
+}
+
+#scrollTop a:hover .BtnScrollTop{
+    background-color: aqua;
+}
+/*proprieté css à utiliser dans JS pour afficher le btnScrollTop au scroll*/
+.btnActive{
+    visibility: visible;
+}
+
+
+
+
+footer {
+    background-color:black;
+    background-attachment:scroll;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    position: scroll;
+    bottom: 0;
+    width: 99,5%;
+    z-index: 2000;
+}
+footer p{
+    margin-top: 1%;
+}
+
+
+
+/*en dessous de 1400px écran pc bureau*/
+@media screen and (max-width: 1920px) {
+    /*Accueil*/
+    #Accueil{
+        height: 1000px;
+    }
+    #Accueil h3{
+        margin-top: 20%;
+    }
+    /* les hover des services*/
+.hoverText{
+    margin-top: -50%;
+}
+.hoverText button{
+    width: 35%;
+}
+.Service1:hover .hoverText .infoHover, .Service3:hover .hoverText .infoHover {
+    margin-top: -10%;
+    height: 50px;    
+}
+#btnService1, #btnService3{
+    margin-top: 40%;
+}
+
+/*Section Tarifs*/
+#Tarifs{
+    height: 850px;
+    position: relative;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        height: 1000px;
+        position: absolute;
+        top: 14%;
+        width: 110%;
+        z-index: -1;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 47%;
+    margin-top: 5%;
+}
+
+.forfait {
+    width: 350px;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 33%;
+    left: 13%;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    height: 45%;
+    width: 29%;
+    top: 33%;
+    left: 8%;
+    z-index: 2;
+}
+
+
+#standard{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+
+#standard:hover{
+    height: 60%;
+    width: 27%;
+    top: 20%;
+    left: 38.5%;
+    z-index: 2;
+}
+
+
+#professionnel{
+    position: absolute;
+    top: 20%;
+    left: 67%;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+    height: 65%;
+    width: 27%;
+    top: 18%;
+    left: 66%;
+    z-index: 2;
+}
+}
+
+/*En dessous de 1280px écran pc 15.6(pour moi)*/
+@media screen and (max-width: 1280px) {
+    /*code de la video de loading*/
+.laVideoContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1200;
+    width: 100%;
+    height: 900px;
+    visibility: visible;
+}
+
+.mp4{
+    margin-top: 12%;
+    margin-left: 32%;
+    height: 480px;
+}
+/*code css pour désactiver la video de loading en javascript*/
+.désactiveVideo{
+    visibility: hidden;
+}
+    /*Accueil*/
+    #Accueil{
+        height: 850px;
+    }
+
+    #Accueil h3{
+        margin-top: 20%;
+    }
+    /*A propos*/
+    #photo{
+        margin-top: 4%;
+    }
+    .compétences{
+        margin-top: -42%;
+    }
+    .Vision{
+        margin-top: -44%;
+    }
+    #photo h5, .compétences h5, .Vision h5{
+        font-weight: bold;
+    }
+    .separation{
+        margin-top: -40%;
+    }
+    .separation2{
+        margin-top: 0%;
+    }
+    /* les hover des services*/
+.hoverText{
+    margin-top: -56%;
+}
+.hoverText button{
+    width: 35%;
+}
+.Service1:hover .hoverText .infoHover, .Service3:hover .hoverText .infoHover {
+    margin-top: -10%;
+    height: 50px;    
+}
+#btnService1, #btnService3{
+    margin-top: 50%;
+}
+
+/*Section Tarifs*/
+#Tarifs{
+    position: relative;
+    height: 785px;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        height: 1000px;
+        margin-left: -10%;
+        margin-top: -18%;
+        width: 110%;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 47%;
+    margin-top: 5%;
+}
+
+.forfait {
+    width: 350px;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 33%;
+    left: 5%;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    height: 50%;
+    width: 27%;
+    top: 25%;
+    left: 8%;
+    z-index: 2;
+}
+
+
+#standard{
+    position: absolute;
+    top: 26%;
+    left: 36.5%;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+
+#standard:hover{
+    height: 65%;
+    width: 30%;
+    top: 20%;
+    left: 37%;
+    z-index: 2;
+}
+
+
+#professionnel{
+    position: absolute;
+    top: 22%;
+    left: 68%;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+    height: 70%;
+    width: 32%;
+    top: 15%;
+    left: 67%;
+    z-index: 2;
+}
+
+/*le conteneur de des formulaires de contact et de la map*/
+.contactContainer{
+    position: absolute;
+    width: 90%;
+    margin-left: 5.5%;
+    margin-top: 5%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7cb;
+}
+}
+/*Pour le ordinateurs portables*/
+@media screen and (min-width: 769px)  and (max-width: 1025px) {
+    /*code de la video de loading*/
+.laVideoContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1200;
+    width: 100%;
+    height: 750px;
+    visibility: visible;
+}
+
+.mp4{
+    margin-top: 6%;
+    margin-left: 28%;
+    height: 480px;
+}
+/*code css pour désactiver la video de loading en javascript*/
+.désactiveVideo{
+    visibility: hidden;
+}
+    main {
+        width: 100%;
+        padding: 0%;
+        font-size: 100%;
+    }
+    header{
+        width: 100%;
+        font-size: 60%;
+    }
+    /*le bouton menu*/
+    .btn-group{
+        display: none;
+        margin-top: -19%;
+        margin-left: 0%;
+        height: 30px;
+    }
+    .btn-group button{
+        background-color: #090e26;
+        border-color: #090e26;
+    }
+    .dropdown-menu{
+        background-color: var(--bs-primary);
+        height: 200px;
+    }
+    .dropdown-item{
+        color: #fff;
+        margin-top: 14%;
+    }
+    nav a{
+        font-size: 130%;
+        
+    }
+    #Accueil{
+        height: 850px;
+        background-image: url(./img/img4.jpg);
+        color: #fff;
+    }
+    #Accueil h1, #Accueil h2, #Accueil h3{
+        font-size: 200%;
+        margin-top: 10%;
+    }
+    #Accueil h3{
+        margin-top: 23%;
+        font-size: 100%;
+    }
+    #Accueil h2{
+        font-size: 100%;
+        margin-left: 50%;
+    }
+
+    /*A propos*/
+    #Apropos{
+        background-color: whitesmoke;
+        background-attachment: fixed;
+        height: 650px;
+        color:black;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #container{
+        text-align: center;
+        background-color: rgba(245, 245, 220, 0.444);
+        height: 70%;
+        width: 90%;
+        margin-left: 5%;;
+        margin-top: 0%;
+        box-shadow: 20px 20px 20px rgba(12, 1, 1, 0.696);
+        display: inline;
+    }
+    #container h1{
+        margin-top: 2%;
+    }
+    /*Partie profil*/
+    #photo{
+        width: 17%;
+        margin-left: 6%;
+        text-align: left;
+    }
+    #photo h2{
+        margin-top: 5%;
+        font-size: 80%;
+    }
+    #photo h5{
+        margin-left: 40%;;
+    }
+    .img-thumbnail{
+        height: 150px;
+        width: 100%;
+        margin-top: 15%;
+    }
+    
+    /*premiere ligne de séparation*/
+    .separation {
+        border-left: 1px solid #000; /* Couleur et épaisseur de la bordure */
+        height: 350px; /* Hauteur de la séparation */
+        margin-top: -38%;
+        margin-left: 30%;
+    }
+    
+    /*parie des compétences*/
+    .compétences{
+        margin-top: -38.5%;
+        font-size: small;
+        height: 50px;
+    }
+    .compétences label{
+        margin-left: -24%;
+    }
+    .progress{
+        width: 33%;
+        margin-left: 33%;
+    }
+    #progressbar1{
+        width: 90%;
+    }
+    #progressbar2{
+        width: 80%;
+    }
+    #progressbar3{
+        width: 85%;
+    }
+    #progressbar4{
+        width: 70%;
+    }
+    #progressbar5{
+        width: 75%;
+    }
+    /*animation des progress bar au hover sur la section à propos*/
+    
+    /*Progress bar 1*/
+    @keyframes changeWidth1 {
+        0% {
+          width: 18.3%; /* Largeur initiale */
+        }
+        50% {
+          width: 75%px; /* Première étape de changement de largeur */
+        }
+        100% {
+          width: 90%; /* Deuxième étape de changement de largeur */
+        }
+      }
+    #Apropos:hover #progressbar1{
+        animation: changeWidth1 5s alternate;    
+    }
+    
+    /*Progress bar 2*/
+    @keyframes changeWidth2 {
+        0% {
+          width: 6.3%; /* Largeur initiale */
+        }
+        50% {
+          width: 47%px; /* Première étape de changement de largeur */
+        }
+        100% {
+          width: 80%; /* Deuxième étape de changement de largeur */
+        }
+      }
+    
+    #Apropos:hover #progressbar2{
+        animation: changeWidth2 8s alternate;   
+    }
+    
+    /*Progress bar 3*/
+    @keyframes changeWidth3 {
+        0% {
+          width: 6.3%; /* Largeur initiale */
+        }
+        50% {
+          width: 50%px; /* Première étape de changement de largeur */
+        }
+        100% {
+          width: 85%; /* Deuxième étape de changement de largeur */
+        }
+      }
+    
+    #Apropos:hover #progressbar3{
+        animation: changeWidth3 10s alternate;   
+    }
+    
+    /*Progress bar 4*/
+    @keyframes changeWidth4 {
+        0% {
+          width: 0%; /* Largeur initiale */
+        }
+        50% {
+          width: 35%px; /* Première étape de changement de largeur */
+        }
+        100% {
+          width: 70%; /* Deuxième étape de changement de largeur */
+        }
+      }
+    
+    #Apropos:hover #progressbar4{
+        animation: changeWidth4 10s alternate;   
+    }
+    
+    /*Progress bar 5*/
+    @keyframes changeWidth5 {
+        0% {
+          width: 3%; /* Largeur initiale */
+        }
+        50% {
+          width: 50%px; /* Première étape de changement de largeur */
+        }
+        100% {
+          width: 75%; /* Deuxième étape de changement de largeur */
+        }
+      }
+    
+    #Apropos:hover #progressbar5{
+        animation: changeWidth5 10s alternate;   
+    }
+    
+    /* code pour mettre en forme le progress bar mixte*/
+    
+    .progress-stacked{
+        width: 33%;
+        margin-left: 33%;
+    }
+    .progressMeet1{
+        width: 25%;
+    }
+    .progressMeet2{
+        width: 40%;
+    }
+    .progressMeet3{
+        width: 20%;
+    }
+    .progressMeet4{
+        width: 15%;
+    }
+    #MeetZone1{
+        width: 100%;
+    }
+    #MeetZone2{
+        width: 100%;
+        background-color: peachpuff;
+    }
+    #MeetZone3{
+        width: 100%;
+    }
+    #MeetZone4{
+        width: 100%;
+        background-color: darkmagenta;
+    }
+    
+    
+    /*deuxième ligne de séparation*/
+    .separation2 {
+        border-left: 1px solid #000; /* Couleur et épaisseur de la bordure */
+        height: 350px; /* Hauteur de la séparation */
+        margin-top: -5%;
+        margin-left: 69%;
+    }
+    
+    /*partie Ma Vision*/
+    .Vision{
+        margin-left: 65%;
+        margin-top: -39%;
+    }
+    .VisionPhoto{
+        height: 150px;
+        width: 45%;
+        float: right;
+        margin: 5px 5px 0px 5px;
+        margin-top: 12%;
+    
+    }
+    .Vision p{
+        font-size: 70%;
+        width: 83%;
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+/* Code CSS de la parie Services Commence à partir d'ici*/
+#Services{
+    height: 687px;
+    width: 100%;
+    background-color: #090e26;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 30px;
+    text-align: center;
+
+}
+#Services h1{
+    color: #fff;
+    margin-left: 29%;
+    margin-top: 0%;
+    padding-top: 5%;
+    padding-bottom: 0%;
+}
+/*les images des services et leur titre*/
+#Services img{
+    height: 70px;
+    margin-top: 10%;
+}
+#Services h4{
+    font-size: 13px;
+}
+/*les div des services*/
+.Service1, .Service2, .Service3, .Service4,.Service5, .Service6{
+    background-color: #fff;
+    height: 150px;
+    width: 20%;
+    margin-top: 13%;
+    margin-left: 3%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(173, 196, 199, 0.696);
+    justify-content: center;
+    overflow: hidden;
+}
+.Service1{
+    position: absolute;
+    left: 7%;
+}
+.Service2{
+    position: absolute;
+    left: 37%;
+}
+.Service3{
+    position: absolute;
+    left: 67%;
+}
+.Service4{
+    position: absolute;
+    left: 7%;
+    top: 270%;
+}
+.Service5{
+    position: absolute;
+    left: 37%;
+    top: 270%;
+}
+.Service6{
+    position: absolute;
+    left: 67%;
+    top: 270%;
+}
+
+/* les hover des services*/
+.hoverText{
+    background-color: var(--bs-warning);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 155px;
+    width: 100%;
+    margin-left: -150%;
+    margin-top: -58%;
+    transform: translateX(-50%);
+    opacity:0;
+    transition: all 1s;
+}
+.infoHover{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 60%;
+}
+.hoverText button{
+    position: absolute;
+    top: 15%;
+    height: 20px;
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 30%;
+    font-size: 30%;
+}
+.Service2 button, .Service4 button, .Service5 button , .Service6 button{
+    position: absolute;
+    top: 15%;
+}
+
+.Service1:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+    
+}
+.Service2:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service3:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service4:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service5:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service6:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+
+/*Section Tarifs*/
+#Tarifs{
+    position: relative;
+    height: 620px;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        height: 1000px;
+        margin-left: -10%;
+        margin-top: -29%;
+        width: 110%;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 47%;
+    margin-top: 5%;
+}
+
+.forfait {
+    width: 320px;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 30%;
+    left: 1%;
+    z-index: 3;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    z-index: 4;
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    width: 40%;
+}
+
+
+#standard{
+    position: absolute;
+    top: 20%;
+    left: 34%;
+    z-index: 3;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+
+#standard:hover{
+    position: absolute;
+    top: 20%;
+    left: 28%;
+    z-index: 4;
+    width: 43%;
+}
+
+
+#professionnel{
+    position: absolute;
+    top: 14%;
+    left: 67%;
+    z-index: 3;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+    position: absolute;
+    top: 14%;
+    left: 60%;
+    z-index: 4;
+    width: 38%;
+}
+
+/* Section contact*/
+#Contact{
+    height: 750px;
+    background-attachment: scroll;
+    background-image: url(./img/call.jpg);
+}
+/* container Block permet de rendre flou l'image de la section contact*/
+#ContainerBlock{
+    background-color: #d5dde889;
+    height: 750px;
+    margin-top: 0%;
+}
+
+.contactContainer{
+    position: absolute;
+    width: 85%;
+    margin-left: 8%;
+    margin-top: 5%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7cb;
+}
+.contactContainer h1{
+    margin-top: 1%;
+    margin-left: 80%;
+}
+#Contact form{
+    z-index: 1;
+    margin-left: -10%;
+    width: 50%;
+}
+#Contact label{
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+#Textarea1{
+    height: 140px;
+}
+#btnEnvoyer{
+    margin-left: 36%;
+    height: 45px;
+    width: 25%;
+    border-top-right-radius: 40%;
+}
+
+/*la div contenant la map*/
+.LaMap iframe{
+    margin-left: 5%;
+    margin-top: 33%;
+    height: 280px;
+    width: 125%;
+}
+
+/*les social média*/
+.SocialMedia{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 20%;
+    top: 67%;
+    left: 55%;
+}
+.linkedin i, .Whatsapp i, .github i, .instagram i{
+    font-size: 40px;
+}
+
+.linkedin a, .Whatsapp a, .github a, .instagram a{
+    color: #000;
+}
+
+.Whatsapp i{
+    margin-left: 40%;
+}
+
+.github i{
+    margin-left: 80%;
+}
+
+.instagram i{
+    margin-left: 110%;
+}
+
+.linkedin a:hover{
+    color: var(--bs-primary);
+}
+
+.Whatsapp a:hover{
+    color: var(--bs-success);
+}
+
+.github a:hover{
+    color: var(--bs-warning);
+}
+
+.instagram a:hover{
+    color: var(--bs-danger);
+}
+/*la div du PopUp*/
+.PopUpContainer{
+    visibility: hidden;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1001;
+    justify-content: center;
+    text-align: justify;
+    background-color: #2f416294;
+    height: 751px;
+    width: 100%;
+}
+.PopUp{
+    text-align: center;
+    background-color: #fff;
+    height: 190px;
+    width: 30%;
+    position: absolute;
+    z-index: 600;
+    top: 30%;
+    left: 38%;
+    border-radius: 6%;
+}
+.PopUp p{
+    margin-top: 30%;
+    color: #000;
+}
+
+.croix{
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 100%;
+    border: 0.5px solid black;
+    position: inherit;
+    top: 30%;
+    left: 50%;
+    z-index: 650; /*Pour mettre la croix au dessus popup(un z-index>600 pour que ca fonctionne vu que le z-index du popup est 600*/
+}
+.croix i{
+    font-size: 50px;
+    color: var(--bs-danger);
+}
+
+/* code pour rendre visible le popup avec JS*/
+@keyframes fadeOut {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      display: none; /* Cela cache la div une fois l'animation terminée */
+    }
+  }
+.PopUpActive{
+    animation: fadeOut 2s forwards;
+}
+
+footer p{
+    margin-top: 3%;
+}
+
+/*le bouton scroll to top*/
+#scrollTop a{
+    color: #000;
+}
+.BtnScrollTop{
+    visibility: hidden;
+    position: fixed;
+    left: 95%;
+    top: 80%;
+    background-attachment: scroll;
+    background-color: rgba(0, 255, 255, 0.256);
+    width: 4%;
+    border-radius: 10%;
+}
+
+.BtnScrollTop i{
+    font-size: 30px;
+    margin-left: 9%;
+    margin-top: 8%;
+}
+
+#scrollTop a:hover .BtnScrollTop{
+    background-color: aqua;
+}
+/*propriété css à utiliser dans JS pour afficher le btnScrollTop au scroll*/
+.btnActive{
+    visibility: visible;
+}
+
+
+}
+/* En dessous de 768 px pour la reduction d'onglet et tablette*/
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /*code de la video de loading*/
+.laVideoContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1200;
+    width: 100%;
+    height: 750px;
+    visibility: visible;
+}
+
+.mp4{
+    margin-top: 23%;
+    margin-left: 23%;
+    height: 380px;
+}
+/*code css pour désactiver la video de loading en javascript*/
+.désactiveVideo{
+    visibility: hidden;
+}
+    main {
+        width: 100%;
+        padding: 0%;
+        font-size: 100%;
+    }
+    header{
+        width: 100%;
+        font-size: 60%;
+    }
+    #KoSys_logo{
+        height: 60px;
+        width: 18%;
+        margin-top: 1%;
+    }
+    /*le bouton menu*/
+    .btn-group{
+        display: flex;
+        margin-top: -19%;
+        margin-left: 0%;
+        height: 32px;
+    }
+    .btn-group button{
+        background-color: #090e26;
+        border-color: #090e26;
+    }
+    .dropdown-menu{
+        background-color: var(--bs-primary);
+        height: 200px;
+    }
+    .dropdown-item{
+        color: #fff;
+        margin-top: 14%;
+    }
+    nav a{
+        font-size: 100%;
+        display: none;
+    }
+    #Accueil{
+        height: 768px;
+        background-image: url(./img/img4.jpg);
+        color: #fff;
+    }
+    #Accueil h1, #Accueil h2, #Accueil h3{
+        font-size: 200%;
+        margin-top: 10%;
+    }
+    #Accueil h3{
+        margin-top: 45%;
+        font-size: 100%;
+    }
+    #Accueil h2{
+        font-size: 100%;
+        margin-left: 50%;
+    }
+
+    /*A propos*/
+#Apropos{
+    background-color: whitesmoke;
+    background-attachment: fixed;
+    height: 700px;
+    color:black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#container{
+    text-align: center;
+    background-color: white;
+    height: 850px;
+    width: 100%;
+    margin-left: 0%;;
+    margin-top: 0%;
+    padding-top: 10%;
+    box-shadow: 20px 20px 20px rgba(12, 1, 1, 0.696);
+    display: inline-block;
+}
+#container h1{
+    margin-top: 2%;
+}
+/*Partie profil*/
+#photo{
+    width: 50%;
+    margin-left: 3%;
+    text-align: left;
+}
+.MesInfos{
+    margin-top: -35%;
+    font-size: 80%;
+    margin-left: -35%;
+}
+#photo h2{
+    margin-top: 0%;
+    font-size: 90%;
+    margin-left: 50%;
+
+}
+#photo h5{
+    margin-left: 5%;;
+}
+.img-thumbnail{
+    height: 120px;
+    width: 30%;
+    margin-top: 2%;
+}
+
+/*premiere ligne de séparation*/
+.separation {
+    display: none;
+
+}
+/*parie des compétences*/
+.compétences{
+    margin-top: 4%;
+    font-size: small;
+    height: 50px;
+}
+.compétences h5{
+    margin-left: -70%;
+}
+.compétences label{
+    margin-left: -55%;
+}
+.compétences p{
+    margin-top: -2%;
+}
+.progress{
+    width: 80%;
+    margin-left: 8%;
+}
+#progressbar1{
+    width: 90%;
+}
+#progressbar2{
+    width: 80%;
+}
+#progressbar3{
+    width: 85%;
+}
+#progressbar4{
+    width: 70%;
+}
+#progressbar5{
+    width: 75%;
+}
+/* code pour mettre en forme le progress bar mixte*/
+
+.progress-stacked{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: -2%;
+}
+.progressMeet1{
+    width: 25%;
+}
+.progressMeet2{
+    width: 40%;
+}
+.progressMeet3{
+    width: 20%;
+}
+.progressMeet4{
+    width: 15%;
+}
+#MeetZone1{
+    width: 100%;
+}
+#MeetZone2{
+    width: 100%;
+    background-color: peachpuff;
+}
+#MeetZone3{
+    width: 100%;
+}
+#MeetZone4{
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+/*deuxième ligne de séparation*/
+.separation2 {
+    display: none;
+}
+/*partie Ma Vision*/
+.Vision{
+    margin-left: -60%;
+    margin-top: 45%;
+}
+.VisionPhoto{
+    height: 90px;
+    width: 12%;
+    float: right;
+    margin: 5px 5px 0px 5px;
+    margin-top: 0%;
+
+}
+.Vision p{
+    font-size: 68%;
+    width: 60%;
+    margin-left: 38%;
+    margin-top: 2%;
+}
+
+/* Code CSS de la parie Services Commence à partir d'ici*/
+#Services{
+    height: 787px;
+    width: 100%;
+    background-color: #090e26;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 30px;
+    text-align: center;
+
+}
+#Services h1{
+    color: #fff;
+    margin-left: 32%;
+    margin-top: 10%;
+}
+/*les images des services et leur titre*/
+#Services img{
+    height: 70px;
+    margin-top: 10%;
+}
+#Services h4{
+    font-size: 13px;
+}
+/*les div des services*/
+.Service1, .Service2, .Service3, .Service4,.Service5, .Service6{
+    width: 45%;
+    background-color: #fff;
+    height: 150px;
+    margin-top: -20%;
+    margin-left: 3%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(173, 196, 199, 0.696);
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* les hover des services*/
+.hoverText{
+    background-color: var(--bs-warning);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 155px;
+    width: 100%;
+    margin-left: -150%;
+    margin-top: -46%;
+    transform: translateX(-50%);
+    opacity:0;
+    transition: all 1s;
+}
+.infoHover{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    font-size: 60%;
+}
+.hoverText button{
+    position: absolute;
+    top: -10%;
+    height: 20px;
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 30%;
+    font-size: 30%;
+}
+.Service2 button, .Service4 button, .Service5 button , .Service6 button{
+    position: absolute;
+    top: 15%;
+}
+
+.Service1:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+    
+}
+.Service2:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service3:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service4:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service5:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service6:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+
+/*Section Tarifs*/
+#Tarifs{
+    position: relative;
+    height: 1700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        display: none;
+        margin-top: -59%;
+        height: 1000px;
+        width: 110%;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 42%;
+    margin-top: 5%;
+}
+#packContainer{
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+}
+
+.forfait {
+    width: 60%;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    position: absolute;
+    top: 8%;
+    left: 20%;
+    width: 60%;
+    height: 350px;
+}
+
+
+#standard{
+    position: absolute;
+    top: 33%;
+    left: 20%;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+
+#standard:hover{
+    position: absolute;
+    top: 33%;
+    left: 20%;
+    width: 60%;
+    height: 450px;
+}
+
+
+#professionnel{
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    width: 60%;
+    height: 520px;
+}
+
+/* Section contact*/
+#Contact{
+    height: 750px;
+    background-attachment: scroll;
+    background-image: url(./img/call.jpg);
+}
+/* container Block permet de rendre flou l'image de la section contact*/
+#ContainerBlock{
+    background-color: #d5dde889;
+    height: 750px;
+    margin-top: -5%;
+}
+
+#Contact form{
+    z-index: 1;
+    margin-left: -2%;
+    width: 80%;
+}
+#Contact label{
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+#Textarea1{
+    height: 140px;
+}
+#btnEnvoyer{
+    margin-left: 34%;
+    height: 45px;
+    width: 35%;
+    border-top-right-radius: 40%;
+}
+.contactContainer{
+    position: relative;
+    top: 10%;
+    left: 3%;
+    width: 80%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7cb;
+}
+.contactContainer h1{
+    display: flex;
+    margin-top: 1%;
+    margin-left: 30%;
+    font-style: italic;
+}
+
+/*la div contenant la map*/
+.LaMap iframe{
+    display: none;
+}
+
+/*les social média*/
+.SocialMedia{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 20%;
+    top: 105%;
+    left: 30%;
+}
+.linkedin i, .Whatsapp i, .github i, .instagram i{
+    font-size: 40px;
+}
+
+.linkedin a, .Whatsapp a, .github a, .instagram a{
+    color: #000;
+}
+
+.Whatsapp i{
+    margin-left: 40%;
+}
+
+.github i{
+    margin-left: 80%;
+}
+
+.instagram i{
+    margin-left: 110%;
+}
+
+.linkedin a:hover{
+    color: var(--bs-primary);
+}
+
+.Whatsapp a:hover{
+    color: var(--bs-success);
+}
+
+.github a:hover{
+    color: var(--bs-warning);
+}
+
+.instagram a:hover{
+    color: var(--bs-danger);
+}
+
+/*la div du PopUp*/
+.PopUpContainer{
+    visibility: hidden;
+    position: absolute;
+    top: 341.5%;
+    left: 0%;
+    z-index: 500;
+    justify-content: center;
+    text-align: justify;
+    background-color: #2f416294;
+    height: 751px;
+    width: 100%;
+}
+.PopUp{
+    text-align: center;
+    background-color: #fff;
+    height: 170px;
+    width: 60%;
+    position: absolute;
+    z-index: 600;
+    top: 35%;
+    left: 23%;
+    border-radius: 4%;
+}
+.PopUp p{
+    margin-top: 20%;
+    color: #000;
+}
+
+.croix{
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 100%;
+    border: 0.5px solid black;
+    position: inherit;
+    top: 32%;
+    left: 45%;
+    z-index: 650; /*Pour mettre la croix au dessus popup(un z-index>600 pour que ca fonctionne vu que le z-index du popup est 600*/
+}
+.croix i{
+    font-size: 50px;
+    color: var(--bs-danger);
+}
+
+/* code pour rendre visible le popup avec JS*/
+@keyframes fadeOut {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      display: none; /* Cela cache la div une fois l'animation terminée */
+    }
+  }
+.PopUpActive{
+    animation: fadeOut 2s forwards;
+}
+
+footer p{
+    margin-top: 3%;
+}
+
+/*le bouton scroll to top*/
+#scrollTop a{
+    color: #000;
+}
+.BtnScrollTop{
+    visibility: hidden;
+    position: fixed;
+    left: 93%;
+    top: 83%;
+    background-attachment: scroll;
+    background-color: rgba(0, 255, 255, 0.256);
+    width: 6%;
+    border-radius: 10%;
+}
+
+.BtnScrollTop i{
+    font-size: 30px;
+    margin-left: 8%;
+    margin-top: 8%;
+}
+
+#scrollTop a:hover .BtnScrollTop{
+    background-color: aqua;
+}
+/*propriété css à utiliser dans JS pour afficher le btnScrollTop au scroll*/
+.btnActive{
+    visibility: visible;
+}
+
+
+}
+
+/* En dessous de 480 px pour les portable mobiles*/
+@media screen and (max-width: 480px) {
+    /*code de la video de loading*/
+.laVideoContainer{
+    background-color: #fff;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1200;
+    width: 100%;
+    height: 900px;
+    visibility: visible;
+}
+
+.mp4{
+    margin-top: 65%;
+    margin-left: 15%;
+    height: 300px;
+}
+/*code css pour désactiver la video de loading en javascript*/
+.désactiveVideo{
+    visibility: hidden;
+}
+    main {
+        width: 100%;
+        padding: 0%;
+        font-size: 100%;
+    }
+    header{
+        height: 30px;
+        width: 100%;
+        font-size: 60%;
+    }
+    #KoSys_logo{
+        height: 120px;
+        width: 18%;
+        margin-top: 1%;
+    }
+    /*le bouton menu*/
+    .btn-group{
+        display: flex;
+        margin-top: -19%;
+        margin-left: 20%;
+        height: 30px;
+    }
+    .btn-group button{
+        background-color: #090e26;
+        border-color: #090e26;
+    }
+    .dropdown-menu{
+        background-color: var(--bs-primary);
+        height: 240px;
+    }
+    .dropdown-item{
+        color: #fff;
+        margin-top: 14%;
+    }
+    nav a{
+        font-size: 100%;
+        display: none;
+    }
+    #Accueil{
+        height: 800px;
+        background-image: url(./img/img4.jpg);
+        color: #fff;
+    }
+    #Accueil h1, #Accueil h2, #Accueil h3{
+        font-size: 110%;
+        margin-top: 10%;
+    }
+    #Accueil h3{
+        margin-top: 75%;
+        font-size: 60%;
+    }
+    #Accueil h2{
+        font-size: 60%;
+        margin-left: 45%;
+    }
+
+    /*A propos*/
+#Apropos{
+    background-color: white;
+    background-attachment: fixed;
+    height: 810px;
+    color:black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#container{
+    text-align: center;
+    background-color: white;
+    height: 810px;
+    width: 100%;
+    margin-left: 0%;;
+    margin-top: 0%;
+    padding-top: 10%;
+    box-shadow: 20px 20px 20px rgba(12, 1, 1, 0.696);
+    display: inline-block;
+}
+#container h1{
+    margin-top: 2%;
+}
+/*Partie profil*/
+#photo{
+    width: 90%;
+    margin-left: 3%;
+    text-align: left;
+}
+.MesInfos{
+    margin-top: -30%;
+    font-size: 80%;
+    margin-left: -35%;
+}
+#photo h2{
+    margin-top: 0%;
+    font-size: 90%;
+    margin-left: 50%;
+
+}
+#photo h5{
+    margin-left: 5%;;
+}
+.img-thumbnail{
+    height: 120px;
+    width: 30%;
+    margin-top: 2%;
+}
+
+/*premiere ligne de séparation*/
+.separation {
+    display: none;
+
+}
+/*parie des compétences*/
+.compétences{
+    margin-top: 8%;
+    font-size: small;
+    height: 50px;
+}
+.compétences h5{
+    margin-left: -50%;
+}
+.compétences label{
+    margin-left: -55%;
+}
+.compétences p{
+    margin-top: -2%;
+}
+.progress{
+    width: 80%;
+    margin-left: 8%;
+}
+#progressbar1{
+    width: 90%;
+}
+#progressbar2{
+    width: 80%;
+}
+#progressbar3{
+    width: 85%;
+}
+#progressbar4{
+    width: 70%;
+}
+#progressbar5{
+    width: 75%;
+}
+/* code pour mettre en forme le progress bar mixte*/
+
+.progress-stacked{
+    width: 80%;
+    margin-left: 8%;
+    margin-top: -6%;
+}
+.progressMeet1{
+    width: 25%;
+}
+.progressMeet2{
+    width: 40%;
+}
+.progressMeet3{
+    width: 20%;
+}
+.progressMeet4{
+    width: 15%;
+}
+#MeetZone1{
+    width: 100%;
+}
+#MeetZone2{
+    width: 100%;
+    background-color: peachpuff;
+}
+#MeetZone3{
+    width: 100%;
+}
+#MeetZone4{
+    width: 100%;
+    background-color: darkmagenta;
+}
+
+/*deuxième ligne de séparation*/
+.separation2 {
+    display: none;
+}
+/*partie Ma Vision*/
+.Vision{
+    margin-left: -60%;
+    margin-top: 77%;
+}
+.VisionPhoto{
+    height: 70px;
+    width: 12%;
+    float: right;
+    margin: 5px 5px 0px 5px;
+    margin-top: 2%;
+
+}
+.Vision p{
+    font-size: 55%;
+    width: 60%;
+    margin-left: 38%;
+    margin-top: 3%;
+}
+
+/* Code CSS de la parie Services Commence à partir d'ici*/
+#Services{
+    height: 787px;
+    width: 100%;
+    background-color: #090e26;
+    background-attachment: scroll;
+    display: flex;
+    justify-content: space-around;
+    padding-inline: 30px;
+    text-align: center;
+
+}
+#Services h1{
+    color: #fff;
+    margin-left: 25%;
+    margin-top: 10%;
+}
+/*les images des services et leur titre*/
+#Services img{
+    height: 70px;
+    margin-top: 10%;
+}
+#Services h4{
+    font-size: 13px;
+}
+/*les div des services*/
+.Service1, .Service2, .Service3, .Service4,.Service5, .Service6{
+    width: 45%;
+    background-color: #fff;
+    height: 120px;
+    margin-top: -20%;
+    margin-left: 3%;
+    border-radius: 10px;
+    box-shadow: 8px 8px 10px rgba(173, 196, 199, 0.696);
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* les hover des services*/
+.hoverText{
+    display: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    height: 120px;
+    width: 100%;
+    margin-left: -150%;
+    margin-top: -69%;
+    transform: translateX(-50%);
+    opacity:0;
+    transition: all 1s;
+}
+.infoHover{
+    display: none;
+    font-size: 43%;
+}
+.hoverText button{
+    height: 20px;
+    width: 40%;
+    margin-top: 0%;
+    margin-left: 30%;
+    font-size: 30%;
+}
+
+.Service1:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+    
+}
+.Service2:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service3:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service4:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service5:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+.Service6:hover .hoverText{
+    margin-left: 50%;
+    opacity: 1;
+}
+
+/*TARIFS*/
+
+#Tarifs{
+    height: 1700px;
+    position: relative;
+    display: inline-block;
+    justify-content: space-between;
+    background-color: #d5dfe177;
+    .videoTarifs{
+        display: none;
+        height: 80px;
+        margin-left: 20%;
+        margin-top: 0%;
+        width: 40%;
+    }
+}
+.TarifsFistTitle{
+    position: relative;
+    z-index: 2;
+    margin-left: 44%;
+    margin-top: 15%;
+}
+
+
+.forfait {
+    width: 100%;
+    border: 1px solid #cccccc1b;
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: smaller;
+}
+
+.forfait h2 {
+    margin-bottom: 0.5em;
+}
+
+.forfait ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.forfait ul li {
+    margin-bottom: 0.5em;
+}
+
+.prix {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+
+.btnTarif {
+    width: 50%;
+    background-color: #ffffff;
+    color: #000;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnTarif:hover {
+    background-color: var(--bs-success);
+    color: #fff;
+}
+/*titre des pack*/
+.TitrePack{
+    border: 1px solid rgba(143, 143, 143, 0.001);
+    border-radius: 5px;
+    height: 110px;
+    width: 70%;
+    margin-top: -11%;
+    margin-left: 14%;
+    background-color: #ffffff;
+}
+.TitrePack h1{
+    margin-left: -15%;
+    font-weight: bold;
+}
+.TitrePack h2{
+    margin-top: 9%;
+    font-size: larger;
+}
+.TitrePack h6{
+    margin-top: -23%;
+    margin-left: 62%;
+    color: black;
+    font-weight: bold;
+}
+/*les packs*/
+#basique{
+    position: absolute;
+    top: 10%;
+    left: 8%;
+    width: 85%;
+    color: #fff;
+    background-color: #2f2e2e;
+    .TitrePack{
+        color: #2f2e2e;
+    }
+}
+#basique:hover{
+    height: 380px;
+    width: 85%;
+    top: 10%;
+    left: 8%;
+    z-index: 0;
+}
+
+
+#standard{
+    position: absolute;
+    top: 35%;
+    left: 8%;
+    width: 85%;
+    background-color: #040c38;
+    color: #fff;
+    .TitrePack{
+        color: #00106b;
+    }
+}
+#standard:hover{
+    height: 450px;
+    width: 85%;
+    top: 35%;
+    left: 8%;
+    z-index: 0;
+}
+
+
+
+#professionnel{
+    position: absolute;
+    top: 65%;
+    left: 8%;
+    width: 85%;
+    color: #fff;
+    background-color:#e08702 ;
+    .TitrePack{
+        color: black;
+    }
+    .TitrePack h2{
+        color: black;
+    }
+    .badgePremium{
+        position: absolute;
+        top: -7%;
+        left: 82%;
+        height: 60px;
+    }
+}
+#professionnel:hover{
+        height: 510px;
+        width: 85%;
+        top: 65%;
+        left: 8%;
+        z-index: 0;
+}
+
+
+/* Section contact*/
+#Contact{
+    height: 750px;
+    background-attachment: scroll;
+    background-image: url(./img/call.jpg);
+}
+/* container Block permet de rendre flou l'image de la section contact*/
+#ContainerBlock{
+    background-color: #d5dde889;
+    height: 750px;
+    margin-top: -5%;
+}
+
+#Contact form{
+    z-index: 1;
+    margin-left: -2%;
+    width: 80%;
+}
+#Contact label{
+    margin-top: 2%;
+    margin-left: 1%;
+    margin-bottom: 0%;
+}
+#Textarea1{
+    height: 140px;
+}
+#btnEnvoyer{
+    margin-left: 34%;
+    height: 45px;
+    width: 35%;
+    border-top-right-radius: 40%;
+}
+.contactContainer{
+    position: relative;
+    top: 10%;
+    left: 3%;
+    width: 80%;
+    border-radius: 1%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #f7f7f7cb;
+}
+.contactContainer h1{
+    display: flex;
+    margin-top: 1%;
+    margin-left: 30%;
+    font-style: italic;
+}
+
+/*la div contenant la map*/
+.LaMap iframe{
+    display: none;
+}
+
+/*les social média*/
+.SocialMedia{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 20%;
+    top: 110%;
+    left: 19%;
+}
+.linkedin i, .Whatsapp i, .github i, .instagram i{
+    font-size: 40px;
+}
+
+.linkedin a, .Whatsapp a, .github a, .instagram a{
+    color: #000;
+}
+
+.Whatsapp i{
+    margin-left: 40%;
+}
+
+.github i{
+    margin-left: 80%;
+}
+
+.instagram i{
+    margin-left: 110%;
+}
+
+.linkedin a:hover{
+    color: var(--bs-primary);
+}
+
+.Whatsapp a:hover{
+    color: var(--bs-success);
+}
+
+.github a:hover{
+    color: var(--bs-warning);
+}
+
+.instagram a:hover{
+    color: var(--bs-danger);
+}
+
+/*la div du PopUp*/
+.PopUpContainer{
+    visibility: hidden;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 1001;
+    justify-content: center;
+    text-align: justify;
+    background-color: #2f416294;
+    height: 901px;
+    width: 100%;
+}
+.PopUp{
+    text-align: center;
+    background-color: #fff;
+    height: 170px;
+    width: 60%;
+    position: absolute;
+    z-index: 600;
+    top: 35%;
+    left: 23%;
+    border-radius: 4%;
+}
+.PopUp p{
+    margin-top: 30%;
+    color: #000;
+}
+
+.croix{
+    background-color: #ffffff;
+    height: 50px;
+    border-radius: 100%;
+    border: 0.5px solid black;
+    position: inherit;
+    top: 32%;
+    left: 45%;
+    z-index: 650; /*Pour mettre la croix au dessus popup(un z-index>600 pour que ca fonctionne vu que le z-index du popup est 600*/
+}
+.croix i{
+    font-size: 50px;
+    color: var(--bs-danger);
+}
+
+/* code pour rendre visible le popup avec JS*/
+@keyframes fadeOut {
+    0% {
+      visibility: visible;
+    }
+    100% {
+      visibility: hidden;
+      display: none; /* Cela cache la div une fois l'animation terminée */
+    }
+  }
+.PopUpActive{
+    animation: fadeOut 2s forwards;
+}
+
+footer p{
+    margin-top: 3%;
+}
+
+/*le bouton scroll to top*/
+#scrollTop a{
+    color: #000;
+}
+.BtnScrollTop{
+    visibility: hidden;
+    position: fixed;
+    left: 92.5%;
+    top: 89%;
+    background-attachment: scroll;
+    background-color: rgba(0, 255, 255, 0.256);
+    width: 7%;
+    border-radius: 10%;
+    height: 30px;
+    
+}
+
+.BtnScrollTop i{
+    font-size: 30px;
+    margin-left: -1%;
+    margin-top: 8%;
+}
+
+#scrollTop a:hover .BtnScrollTop{
+    background-color: aqua;
+}
+/*propriété css à utiliser dans JS pour afficher le btnScrollTop au scroll*/
+.btnActive{
+    visibility: visible;
+}
+
+
+}
